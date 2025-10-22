@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Break Minds | Física Aplicada</title>
+  <style>
+    :root {
+      --color-bg: #0d1117;
+      --color-accent: #00e0ff;
+      --color-text: #f5f5f5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: radial-gradient(circle at top, #0a1825, #000);
+      border-bottom: 2px solid var(--color-accent);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--color-accent);
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-style: italic;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #ccc;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    section h2 {
+      color: var(--color-accent);
+      margin-bottom: 1rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .service {
+      background: #111820;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 224, 255, 0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 224, 255, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #0a1825;
+      border-top: 1px solid #333;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Break Minds</h1>
+    <p>Rompe la bombilla, enciende la mente</p>
+  </header>
+
+  <section>
+    <h2>¿Quiénes somos?</h2>
+    <p>
+      En <strong>Break Minds</strong> somos un grupo de físicos apasionados por la innovación y la resolución de problemas reales.
+      Brindamos <strong>servicios de consultoría científica y soporte técnico</strong> a empresas que buscan optimizar procesos,
+      mejorar la precisión de sus mediciones o incorporar conocimiento físico avanzado en sus proyectos.
+    </p>
+  </section>
+
+  <section>
+    <h2>Nuestros servicios</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Asesoría Física Aplicada</h3>
+        <p>Modelado, simulación y análisis físico para optimizar tus procesos industriales o tecnológicos.</p>
+      </div>
+      <div class="service">
+        <h3>Instrumentación y Medición</h3>
+        <p>Diseño, calibración y soporte de equipos de medición física de alta precisión.</p>
+      </div>
+      <div class="service">
+        <h3>Capacitación Científica</h3>
+        <p>Formación para equipos técnicos y de ingeniería en fundamentos y aplicaciones prácticas de la física moderna.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contacto</h2>
+    <p>¿Tienes un reto que resolver? Escríbenos a <a href="mailto:info@breakminds.com">info@breakminds.com</a></p>
+  </section>
+
+  <footer>
+    © 2025 Break Minds · Inspirando innovación científica
+  </footer>
+</body>
+</html>
