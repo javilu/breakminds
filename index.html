@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Break Minds | Física Aplicada</title>
 
   <!-- Fuentes y estilos -->
@@ -61,7 +61,6 @@
       font-family: 'Orbitron', sans-serif;
       font-size: 3rem;
       color: var(--accent);
-      letter-spacing: 1px;
       text-shadow: 0 0 20px rgba(0,224,255,0.5);
     }
 
@@ -73,7 +72,7 @@
     }
 
     section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 5rem auto;
       padding: 0 1.5rem;
       text-align: center;
@@ -91,7 +90,7 @@
       color: var(--accent);
       font-family: 'Orbitron', sans-serif;
       font-size: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       text-shadow: 0 0 10px rgba(0,224,255,0.3);
     }
 
@@ -101,39 +100,82 @@
       color: #ddd;
     }
 
-    /* Servicios */
+    /* SERVICIOS HORIZONTALES */
     .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
+      flex-direction: column;
       gap: 2rem;
-      margin-top: 3rem;
     }
 
     .service {
+      display: flex;
+      align-items: center;
       background: rgba(15, 25, 35, 0.9);
       border: 1px solid rgba(0,224,255,0.2);
       border-radius: 16px;
-      padding: 2rem 1.5rem;
+      padding: 1.5rem 2rem;
       box-shadow: 0 0 15px rgba(0,224,255,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
       position: relative;
+      overflow: hidden;
     }
 
     .service:hover {
-      transform: translateY(-8px);
+      transform: scale(1.02);
+      background: rgba(20, 35, 50, 0.95);
       box-shadow: 0 0 25px rgba(0,224,255,0.4);
     }
 
-    .service img {
-      width: 70px;
-      margin-bottom: 1rem;
-      filter: drop-shadow(0 0 6px var(--accent));
+    .service::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(0,224,255,0.2), transparent);
+      transition: all 0.6s;
     }
 
-    .service h3 {
+    .service:hover::before {
+      left: 125%;
+    }
+
+    .service img {
+      width: 80px;
+      margin-right: 2rem;
+      filter: drop-shadow(0 0 6px var(--accent));
+      flex-shrink: 0;
+    }
+
+    .service-text {
+      text-align: left;
+    }
+
+    .service-text h3 {
       color: var(--accent2);
-      margin-bottom: 0.8rem;
       font-family: 'Orbitron', sans-serif;
+      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+    }
+
+    .service-text p {
+      color: #ddd;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 700px) {
+      .service {
+        flex-direction: column;
+        text-align: center;
+      }
+      .service img {
+        margin: 0 0 1rem 0;
+      }
+      .service-text {
+        text-align: center;
+      }
     }
 
     footer {
@@ -154,7 +196,6 @@
       text-decoration: underline;
     }
 
-    /* Efecto de glow animado en títulos */
     h2 span {
       animation: glow 2s ease-in-out infinite alternate;
     }
@@ -170,7 +211,7 @@
   <div id="particles-js"></div>
 
   <header>
-    <img src="111111.png" alt="Logo Break Minds">
+    <img src="111111.png" alt="Logo Break Minds" />
     <h1>Break Minds</h1>
     <p>Rompe la bombilla, enciende la mente</p>
   </header>
@@ -185,19 +226,26 @@
 
   <section class="services">
     <h2><span>Nuestros servicios</span></h2>
-    <div class="services">
-      <div class="service">
-        <img src="https://cdn-icons-png.flaticon.com/512/2621/2621282.png" alt="Simulación Física">
+
+    <div class="service">
+      <img src="https://cdn-icons-png.flaticon.com/512/2621/2621282.png" alt="Simulación Física">
+      <div class="service-text">
         <h3>Simulación y Modelado</h3>
         <p>Usamos herramientas de modelado computacional y simulación física para optimizar el rendimiento de sistemas complejos y reducir costos experimentales.</p>
       </div>
-      <div class="service">
-        <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Instrumentación Científica">
+    </div>
+
+    <div class="service">
+      <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Instrumentación Científica">
+      <div class="service-text">
         <h3>Instrumentación Científica</h3>
         <p>Diseño, calibración y mantenimiento de equipos de medición con precisión física y electrónica de alta gama.</p>
       </div>
-      <div class="service">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Consultoría Física">
+    </div>
+
+    <div class="service">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Consultoría Física">
+      <div class="service-text">
         <h3>Consultoría y Asesoría</h3>
         <p>Aplicamos los principios de la física para resolver desafíos industriales y tecnológicos mediante análisis teóricos y experimentales.</p>
       </div>
@@ -216,13 +264,12 @@
     © 2025 Break Minds · Innovación desde la Física
   </footer>
 
-  <!-- Scripts -->
+  <!-- Partículas -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
-    // Activar partículas tipo "átomos"
     particlesJS("particles-js", {
       "particles": {
-        "number": { "value": 80 },
+        "number": { "value": 90 },
         "color": { "value": "#00e0ff" },
         "shape": { "type": "circle" },
         "opacity": { "value": 0.5 },
@@ -243,7 +290,6 @@
       "retina_detect": true
     });
 
-    // Animación al hacer scroll
     const sections = document.querySelectorAll('section');
     const showOnScroll = () => {
       const trigger = window.innerHeight * 0.8;
